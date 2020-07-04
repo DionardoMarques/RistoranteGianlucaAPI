@@ -1,0 +1,197 @@
+/*========================================= BREAKPOINTS =========================================*/
+/*========================================= MOBILE FIRST =========================================*/
+/* SMALL DEVICES - SMARTHPHONES */
+@media screen and (min-width: 480px){
+    .logo{
+        width: 75px;
+        height: 75px;
+        margin-left: 3%;
+        float: left;
+        background: url(../img/logo_ristorante_gianluca.png) center center/85px no-repeat;
+        font-size: 0;
+    }
+    .btn{
+        width: 55%;
+        font-size: 1.0em;
+        text-align: left;
+        cursor: pointer;
+        padding: 3%;
+    }
+}
+/* 100% Largura das imagens com modal em telas pequenas */
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+/* SMALL DEVICES - TABLETS */
+@media screen and (min-width: 768px){
+    .logo{
+        width: 85px;
+        height: 85px;
+        margin-right: 3%;
+        float: left;
+        background: url(../img/logo_ristorante_gianluca.png) center center/95px no-repeat;
+        font-size: 0;
+    }
+    .btn{
+        width: 50%;
+        font-size: 1.0em;
+        text-align: left;
+        cursor: pointer;
+        padding: 3%;
+    }
+    .title h3{
+        font-size: 1.5em;
+    }
+    .servico{
+        width: 49%;
+        float: left;
+        margin-right: 2%;
+    }
+    /* aplica estes parâmetros ao segundo artigo */
+    .servico:nth-child(2){
+        margin-right: 0;
+    }
+    .galeria{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .franquias h2{
+        margin-bottom: 2%;
+    }
+    .formulario{
+        float: left;
+    }
+    .nos_encontre{
+        float: right;
+    }
+}
+/* MEDIUM DEVICES - TABLETS & DESKTOPS */
+@media screen and (min-width: 960px){
+    .logo{
+        width: 90px;
+        height: 90px;
+        margin-right: 3%;
+        float: left;
+        background: url(../img/logo_ristorante_gianluca.png) center center/100px no-repeat;
+        font-size: 0;
+    }
+    .title{
+        width: 70%;
+        float: left;
+        text-align: left;
+    }
+    .title h2{
+        font-size: 3em;
+    }
+    .title h3{
+        font-size: 2em;
+    }
+    .buttons{
+        width: 30%;
+        float: right;
+        margin-top: 0;
+    }
+    .servico{
+        width: 32%;
+    }
+    .servico:nth-child(2){
+        margin-right: 2%;
+    }
+    .servico:nth-child(3){
+        margin-right: 0;
+    }
+    .btn{
+        width: 55%;
+        font-size: 1.0em;
+        text-align: left;
+        cursor: pointer;
+        padding: 5%;
+        margin-top: 10%;
+    }
+    .fa-clock{
+        margin: 0;
+        margin-top: 2%;
+    }
+    .franquias h2{
+        margin-bottom: 1.5%;
+    }
+    .formulario{
+        width: 50%;
+    }
+    .nos_encontre{
+        width: 50%;
+    }
+}
+/* LARGE DEVICES - WIDE SCREENS */
+@media screen and (min-width: 1280px){
+    .btn{
+        margin-top: 5%;
+    }
+    .btn-menu{
+        display: none;
+    }
+    .btn-close{
+        display: none;
+    }
+    .menu{
+        width: auto;
+        height: 56px;
+        line-height: 56px;
+        float: right;
+        background-color: transparent;
+        display: block !important;
+        position: static;
+        margin-top: 2%;
+        text-transform: uppercase;
+    }
+    .menu li{
+        padding: 0;
+        float: left;
+    }
+    .menu li a{
+        color: #fff;
+        font-size: 1.5em;
+        padding: 15px;
+    }
+    .menu li a:hover{
+        border: none;
+    }
+    .menu li a:hover,
+    menu li a:active {
+        border-bottom: 1.5px solid #fff;
+    }
+    .logo{
+        width: 125px;
+        height: 120px;
+        margin-right: 3%;
+        float: left;
+        background: url(../img/logo_ristorante_gianluca.png) center center/140px no-repeat;
+        font-size: 0;
+    }
+    .horario h2{
+        font-size: 2em;
+    }
+    .horario h3{
+        font-size: 1.5em;
+    }
+    .social-icons a{
+        font-size: 2em;
+    }
+    .franquias h2{
+        margin-bottom: 1%;
+    }
+    .delivery h2{
+        font-size: 2em;
+    }
+    .delivery h3{
+        font-size: 1.5em;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }

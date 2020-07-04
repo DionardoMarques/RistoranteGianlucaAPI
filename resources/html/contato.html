@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ristorante Gianluca</title>
+        <meta name="description" content="Restaurante especializado na culinária italiana">
+        <meta name="keywords" content="Restaurante, Culinária Italiana, Gastronomia">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Dionardo Gianluca">
+        <meta name="rating" content="general">
+        <meta name="copyright" content="© 2020 RistoranteGianluca">
+        <meta http-equiv="refresh" content="60">
+        <meta http-equiv="content-language" content="pt-br">
+        <meta NAME="ROBOTS" CONTENT="INDEX">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/queries.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+        <link rel="icon" href="../img/logo_ristorante_gianluca.png">
+    </head>
+    <body>
+        <!------------------------- LOGO E MENU RESPONSIVO ------------------------->
+        <header class="cabecalho container">
+        <a href="index.html"> <h1 class="logo"> Ristorante Gianluca</h1></a>
+        <button class="btn-menu bg-gradient"> <i class="fa fa-bars fa-lg"></i></button>
+        <nav class="menu">
+            <a class="btn-close"><i class="fa fa-times"></i></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="franquias.html">Franquias</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="restrito.html">Restrito</a></li>
+            </ul>
+        </nav>
+        </header>
+        <!------------------------- CONTATO/NOS ENCONTRE ------------------------->
+         <main class="contato container">
+            <h1>VENHA ATÉ NOS!</h1>
+             <div class="formulario">
+                <h2>Faça contato</h2>
+                <hr>
+                <form name="formulario" action="" method="POST" id="formulario">
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" placeholder=" Seu nome aqui" class="esticar" required><br><br>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" placeholder=" exemplo@gmail.com" class="esticar" required><br><br>
+                    <label for="telefone">Telefone:</label><br>
+                    <input type="tel" id="telefone" placeholder=" (DDD) 9-9999-9999" class="esticar"><br><br>
+                    <label for="assunto">Assunto:</label><br>
+                    <input type="text" id="assunto" placeholder=" Ex: Descontos e promoções" class="esticar" required><br><br>
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea name="mensagem" id="mensagem" cols="42" rows="10" placeholder="Deixei sua mensagem aqui."></textarea><br><br>
+                    <input type="submit" name="botao_enviar" value="Enviar" id="botao_enviar">
+                </form>
+             </div>
+             <div class="nos_encontre">
+                <h2>Nos Encontre</h2>
+                <hr>
+                <article id="localizacao">
+                    <h3><em>Ristorante Gianluca Matriz</em></h3>
+                    <p>Rua 24 de Outubro, 820 - Independência<br>
+                    Porto Alegre - RS - Brasil<br>
+                    CEP 90510-000<br>
+                    Telefone: +55 (51) 3259-1229 <i class="fab fa-whatsapp"></i><br>
+                    </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4457678706103!2d-51.20274448434395!3d-30.024066737290752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979b62a1d87af%3A0x12c241671358082c!2sR.%2024%20de%20Outubro%2C%20820%20-%20Independ%C3%AAncia%2C%20Porto%20Alegre%20-%20RS%2C%2090510-000!5e0!3m2!1spt-BR!2sbr!4v1593895841787!5m2!1spt-BR!2sbr" width="400" height="290" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </article>
+            </div>
+         </main>
+        <!------------------------- RODAPÉ ------------------------->
+        <footer class="rodape container">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://accounts.google.com/" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.google.com/intl/pt/gmail/about/#" target="_blank"><i class="far fa-envelope"></i></a>
+            </div>
+            <p class="copyright">
+                Copyright &copy; 2020 - RistoranteGianluca. Todos os direitos reservados.
+            </p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/2c0226d813.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
