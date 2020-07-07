@@ -73,7 +73,7 @@ final class FranquiaController
         $queryParams = $request->getParsedBody();
 
         $franquiasDAO = new FranquiasDAO();
-        $id = (int)$queryParams['id'];
+        $id = $args['id'];
         $franquiasDAO->deleteFranquia($id);
 
         $response = $response->withJson([
@@ -81,5 +81,16 @@ final class FranquiaController
         ]);
 
         return $response;
+    }
+
+    //Busca das franquais pelo ID de cada uma.
+    public function buscarPorId(Request $request, Response $response, array $args): Response
+    {
+        $id = $args['id'];
+        
+        $dao = new FranquiasDAO;
+        $franquia = $dao->buscarPorId($id);
+
+        return $response->withJson($franquia);
     }
 }
