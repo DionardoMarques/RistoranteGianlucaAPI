@@ -46,11 +46,18 @@ $app->group('', function() use ($app) {
     $app->put('/franquia', FranquiaController::class . ':updateFranquia');
     $app->delete('/franquia', FranquiaController::class . ':deleteFranquia');
 
+    //Rotas utilizadas para trabalhar com as franquias especificamente pelo ID.
+    $app->get('/franquia/{id}', FranquiaController::class . ':buscarPorId');
+    $app->put('/franquia/{id}', FranquiaController::class . ':updateFranquia');
+    $app->delete('/franquia/{id}', FranquiaController::class . ':deleteFranquia');
+
 //Middlewares de autenticação.
 //Middleware 2:
-})->add(new JwtDateTimeMiddleware())
+})
+// ->add(new JwtDateTimeMiddleware())
 //Middleware 1:
-->add(jwtAuth());
+// ->add(jwtAuth())
+;
 
 //Autenticação Básica
 // add(basicAuth())
