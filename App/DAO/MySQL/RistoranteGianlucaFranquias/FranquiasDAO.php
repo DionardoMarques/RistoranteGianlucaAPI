@@ -88,4 +88,18 @@ class FranquiasDAO extends Conexao
             'id' => $id
         ]);
     }
+
+    //Busca das franquais pelo ID de cada uma no banco de dados.
+    public function buscarPorId($id)
+    {
+        $statement = $this->pdo
+            ->prepare('SELECT * FROM franquias WHERE id = :id;');
+        $statement->bindParam ('id', $id);
+        $statement->execute();
+        $result = $statement->fetch(\PDO::FETCH_OBJ);
+        if($result)
+            return new FranquiaModel($result->id,$result->nome,$result->telefone,$result->endereco);
+        else
+            return null;
+    }
 }
