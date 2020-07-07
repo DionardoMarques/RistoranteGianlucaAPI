@@ -1,43 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ristorante Gianluca</title>
-        <meta name="description" content="Restaurante especializado na culinária italiana">
-        <meta name="keywords" content="Restaurante, Culinária Italiana, Gastronomia">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="Dionardo Gianluca">
-        <meta name="rating" content="general">
-        <meta name="copyright" content="© 2020 RistoranteGianluca">
-        <meta http-equiv="refresh" content="60">
-        <meta http-equiv="content-language" content="pt-br">
-        <meta NAME="ROBOTS" CONTENT="INDEX">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="../css/queries.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-        <link rel="icon" href="../img/logo_ristorante_gianluca.png">
-    </head>
-    <body>
-        <!------------------------- LOGO E MENU RESPONSIVO ------------------------->
-        <header class="cabecalho container">
-        <a href="index.html"> <h1 class="logo"> Ristorante Gianluca</h1></a>
-        <button class="btn-menu bg-gradient"> <i class="fa fa-bars fa-lg"></i></button>
-        <nav class="menu">
-            <a class="btn-close"><i class="fa fa-times"></i></a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="franquias.html">Franquias</a></li>
-                <li><a href="cardapio.html">Cardápio</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="restrito.html">Restrito</a></li>
-            </ul>
-        </nav>
-        </header>
+class HomeVisual {
+
+    constructor(controller, seletor){
+        this.homeController = controller;
+        this.seletor = seletor;
+    }
+
+    montarHome(){
+        var str = `
         <!------------------------- BANNER ------------------------->
-        <div class="banner container">
+        <div id="novo" href="" class="banner container">
             <div class="title">
                 <h2> O MELHOR DA CULINÁRIA ITALIANA! </h2>
                 <h3> Desfrute o verdadeiro sabor da Itália, feito por italianos legítimos. </h3>
@@ -86,21 +57,15 @@
                 *Telefone válido apenas para a cidade de Porto Alegre
             </h3>
         </section>
-        <!------------------------- RODAPÉ ------------------------->
-        <footer class="rodape container">
-            <div class="social-icons">
-                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://accounts.google.com/" target="_blank"><i class="fab fa-google"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.google.com/intl/pt/gmail/about/#" target="_blank"><i class="far fa-envelope"></i></a>
-            </div>
-            <p class="copyright">
-                Copyright &copy; 2020 - RistoranteGianluca. Todos os direitos reservados.
-            </p>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://kit.fontawesome.com/2c0226d813.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../js/jquery.js"></script>
-    </body>
-</html>
+        `;
+
+        var home = document.querySelector(this.seletor);
+        home.innerHTML = str;
+
+        const self = this;
+        const linkNovo = document.querySelector("#novo");
+        linkNovo.onclick = function(event) {
+            self.franquiaController.carregarHome(event);
+        }
+    }
+}

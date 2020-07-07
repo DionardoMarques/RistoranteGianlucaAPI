@@ -588,9 +588,32 @@ iframe{
     border-radius: 4px;
     margin-top: 0.5%;
 }
-#botao_entrar{
+.botao_entrar{
     padding: 0.5% 1%;
     border: 2px solid #99181F;
     border-radius: 4px;
     cursor: pointer;
+}
+.tabela_franquias, .tabela_franquias td, .tabela_franquias th{
+    border: 3px solid #99181F;
+}
+.tabela_franquias{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1%;
+}
+.tabela_franquias th{
+    height: 50px;
+}
+.titulos_tabela_form{
+    margin: 0 auto;
+    color: #99181F;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.botao_restrito{
+    font-weight: 700;
+}
+.formulario_franquias{
+    margin: 1% 0.5%;
 }
