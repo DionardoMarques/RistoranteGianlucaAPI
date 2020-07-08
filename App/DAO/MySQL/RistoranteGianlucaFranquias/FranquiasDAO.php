@@ -96,10 +96,11 @@ class FranquiasDAO extends Conexao
             ->prepare('SELECT * FROM franquias WHERE id = :id;');
         $statement->bindParam ('id', $id);
         $statement->execute();
-        $result = $statement->fetch(\PDO::FETCH_OBJ);
-        if($result)
-            return new FranquiaModel($result->id,$result->nome,$result->telefone,$result->endereco);
-        else
+        $result = $statement->fetch(\PDO::FETCH_ASSOC);
+        if ($result) {
+            return new FranquiaModel($result['id'], $result['nome'], $result['telefone'], $result['endereco']);
+        }
+                else
             return null;
     }
 }
