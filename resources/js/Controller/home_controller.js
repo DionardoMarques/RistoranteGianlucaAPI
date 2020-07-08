@@ -4,7 +4,7 @@ class HomeController{
     }
 
     inicializa(){
-        this.montarHome();
+        this.carregarHome();
     }
 
     carregarHome(){

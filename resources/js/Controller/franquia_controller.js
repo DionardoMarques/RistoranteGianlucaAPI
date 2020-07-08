@@ -16,12 +16,10 @@ class FranquiaController{
 
     carregarFranquias(){
         const self = this;
-        //definição da função que trata o buscar franquias com sucesso
         const sucesso = function(franquias){
             self.tabelaFranquias.montarTabela(franquias);
         }
     
-        //definição da função que trata o erro ao buscar os franquias
         const trataErro = function(statusCode) {
             console.log("Erro:", statusCode);
         }
@@ -64,8 +62,6 @@ class FranquiaController{
     deletarFranquia(id, event){
         const self = this;
         this.franquiaService.deletarFranquia(id,
-            //colocar direto a funcao no parametro
-            //nao precisa criar a variavel ok e erro
             function() {
                 self.carregarFranquias();
             },
