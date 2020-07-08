@@ -9,21 +9,28 @@ final class FranquiaModel
     /**
      * @var int
      */
-    private $id;
+    public $id;
     /**
      * @var string
      */
-    private $nome;
+    public $nome;
     /**
      * @var string
      */
-    private $telefone;
+    public $telefone;
     /**
      * @var string
      */
-    private $endereco;
+    public $endereco;
     
     // ==============================================================================================================================================
+    public function __construct($id, $nome, $telefone, $endereco)
+    {
+        $this->id=$id;
+        $this->nome=$nome;
+        $this->telefone=$telefone;
+        $this->endereco=$endereco;
+    }
     //Getters and Setters: Funções que poderão capturar (Getter) o valor dos atributos, ou para definir um novo valor para eles (Setters).
     //Getter ID
     /**
