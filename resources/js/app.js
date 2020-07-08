@@ -1,18 +1,9 @@
-// const homeController = new HomeController();
+const homeController = new HomeController();
 const franquiaController = new FranquiaController();
-
-//RISTORANTE_GIANLUCA.HTML
-// var body = document.querySelector("body");
-// body.onload = function () {
-//     //franquiaController.carregarFormulario();
-//     //franquiaController.inicializa();
-//     document.querySelector("main").innerHTML = "<h2>INÍCIO DE UM NOVO COMEÇO</h2>";
-// }
 
 //HOME
 document.querySelector("#home").onclick = function() {
-    // homeController.inicializa();
-    document.querySelector("main").innerHTML = "<h2>Home</h2>";
+    homeController.inicializa();
 }
 
 //SOBRE
