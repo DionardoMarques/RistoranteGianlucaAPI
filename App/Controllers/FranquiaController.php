@@ -31,11 +31,11 @@ final class FranquiaController
         $data = $request->getParsedBody();
         //Criação do objeto de DAO, comunicação com o banco (FranquiasDAO) e (FranquiaModel) que trará a estrutura de dados dos atributos da tabela (Franquais) para dentro do VSCode sem maiores problemas.
         $franquiasDAO = new FranquiasDAO();
-        $franquia = new FranquiaModel();
+        $franquia = new FranquiaModel(0,$data['nome'],$data['telefone'],$data['endereco']);
         //Aqui serão as informações que deverão ser passadas na requisição via Postman para cadastrarmos uma nova franquia na API.
-        $franquia->setNome($data['nome'])
-            ->setEndereco($data['endereco'])
-            ->setTelefone($data['telefone']);
+        // $franquia->setNome($data['nome'])
+            // ->setEndereco($data['endereco'])
+            // ->setTelefone($data['telefone']);
         $franquiasDAO->insertFranquia($franquia);
         //Retorno de uma mensagem de inserção concluída no formado de dados Json.
         $response = $response->withJson([
@@ -49,14 +49,16 @@ final class FranquiaController
     //Funcionamento muito similar ao (insertFranquia), só que nesta função iremos passar além do nome, endereço e telefone da franquia, também o id, para que o usuário diga a API qual franquia ele quer que seja alterada.
     public function updateFranquia(Request $request, Response $response, array $args): Response
     {
+        $id = $args['id'];
+
         $data = $request->getParsedBody();
 
         $franquiasDAO = new FranquiasDAO();
-        $franquia = new FranquiaModel();
-        $franquia->setId((int)$data['id'])
-            ->setNome($data['nome'])
-            ->setEndereco($data['endereco'])
-            ->setTelefone($data['telefone']);
+        $franquia = new FranquiaModel((int)$id,$data['nome'],$data['telefone'],$data['endereco']);
+        // $franquia->setId((int)$data['id'])
+        //     ->setNome($data['nome'])
+        //     ->setEndereco($data['endereco'])
+        //     ->setTelefone($data['telefone']);
         $franquiasDAO->updateFranquia($franquia);
 
         $response = $response->withJson([
